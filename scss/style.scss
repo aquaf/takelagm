@@ -297,18 +297,30 @@ h4 {
             transition: all 0.3s ease 0s;
         }
     }
+}
+.slider{
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 100%;
         height: 100vh;
-        background: url(../img/slider/first-screen-min.jpg) top center no-repeat;
-        background-size: cover;
+        position: relative;
+        overflow: hidden;
+    }
+    &__img {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
     }
     &__content-inner {
         color: $light-primary-color;
         text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+        z-index: 2;
     }
     &__content-title {
         font-size: 4rem;
